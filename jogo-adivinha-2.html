@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha(){
+	document.write("<br>");
+}
+
+function mostra(frase){
+	document.write(frase);
+	pulaLinha();
+}
+
+function sorteia(maximo) {
+        return Math.round(Math.random() * maximo);
+    }    
+
+var maximo = parseInt(prompt("Escolha um valor máximo...Este valor será o  limite superior"));
+
+valorPensado = sorteia(maximo);
+
+var contador = 1;
+
+while (contador<=3){
+var chute = parseInt(prompt("Escolha um número de 1 até " + maximo));
+
+  if(chute == valorPensado){
+ 	mostra("Você acertou!");
+  break;
+
+ }else{
+ 	alert("!!!Você Errou!!!!!");
+   contador++;
+ }
+
+}
+
+
+</script>
